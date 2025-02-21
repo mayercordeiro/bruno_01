@@ -1,0 +1,21 @@
+{
+    "name": "vendor/gestao-produtos-fornecedores",
+    "description": "Atividade acadêmica \"Mini Sistema de Gestão de Produtos\". Utilizando técnicas de Orientação a Objetos, Relacionamento entre objetos, Armazenamento e Autenticação",
+    "authors": [
+        {
+            "name": "Guilherme",
+            "email": "mayercordeiro@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "scripts": {
+        "start": "php -S localhost:7000 -t public"
+    },
+    "autoload": {
+        "psr-4": {
+            "Config\\": "config/"
+        }
+    }
+}
