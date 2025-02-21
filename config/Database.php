@@ -16,17 +16,11 @@ class Database
 
     public function __construct()
     {
-        // Carrega as variáveis do .env
-        // $this->host = 'mysql_db';
-        // $this->dbName = 'my_database';
-        // $this->username = 'user';
-        // $this->password = 'password';
-        // $this->charset = 'utf8mb4';
-        $this->host = getenv('DB_HOST');
-        $this->dbName = getenv('DB_DATABASE');
-        $this->username = getenv('DB_USERNAME');
-        $this->password = getenv('DB_PASSWORD');
-        $this->charset = getenv('DB_CHARSET');
+        $this->host = $_ENV['DB_HOST'];
+        $this->dbName = $_ENV['DB_NAME'];
+        $this->username = $_ENV['DB_USERNAME'];
+        $this->password = $_ENV['DB_PASSWORD'];
+        $this->charset = $_ENV['DB_CHARSET'];
     }
 
     public function connect(): PDO
@@ -35,7 +29,6 @@ class Database
             try {
                 $dsn = "mysql:host={$this->host};dbname={$this->dbName};charset={$this->charset}";
                 $this->connection = new PDO($dsn, $this->username, $this->password);
-                // Configurações adicionais para segurança e desempenho
                 $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $this->connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
             } catch (PDOException $e) {

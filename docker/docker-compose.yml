@@ -16,7 +16,7 @@ services:
       - ../:/var/www/html
       - ./app_container/php.ini:/usr/local/etc/php/php.ini
     ports:
-      - "9024:8000"
+      - "9001:8000"
     depends_on:
       - db
     command: php -S 0.0.0.0:8000 -t /var/www/html/public
@@ -33,7 +33,7 @@ services:
       MYSQL_USER: user
       MYSQL_PASSWORD: password
     ports:
-      - "9019:3306"
+      - "9002:3306"
     volumes:
       - mysql_data:/var/lib/mysql
     networks:

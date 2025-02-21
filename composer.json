@@ -1,5 +1,5 @@
 {
-    "name": "vendor/gestao-produtos-fornecedores",
+    "name": "mayercordeiro/gestao-produtos-fornecedores",
     "description": "Atividade acadêmica \"Mini Sistema de Gestão de Produtos\". Utilizando técnicas de Orientação a Objetos, Relacionamento entre objetos, Armazenamento e Autenticação",
     "authors": [
         {
@@ -11,11 +11,15 @@
         "vlucas/phpdotenv": "^5.6"
     },
     "scripts": {
-        "start": "php -S localhost:7000 -t public"
+        "start": "php -S localhost:7000 -t public",
+        "migrate": "php config/Migrations/RunMigrations.php"
     },
     "autoload": {
         "psr-4": {
             "Config\\": "config/"
-        }
+        },
+        "files": [
+            "config/bootstrap.php"
+        ]
     }
 }
