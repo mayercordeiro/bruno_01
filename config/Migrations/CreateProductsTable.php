@@ -29,7 +29,7 @@ class CreateProductsTable extends CreateMigration
             $this->truncateTable('products');
 
             // Dados a serem inseridos
-            $products =  require_once 'products_data.php';
+            $products = require_once __DIR__ . '/data/products_data.php';
 
             $this->insertBatch('products', $products);
 

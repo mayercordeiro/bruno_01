@@ -19,6 +19,7 @@ class ComposerStaticInit33bbd0ec0c437e8727bb0de1fe7cc7a5
             'Symfony\\Polyfill\\Php80\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
+            'Src\\' => 4,
         ),
         'P' => 
         array (
@@ -36,6 +37,10 @@ class ComposerStaticInit33bbd0ec0c437e8727bb0de1fe7cc7a5
         array (
             'Config\\' => 7,
         ),
+        'A' => 
+        array (
+            'App\\' => 4,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -50,6 +55,10 @@ class ComposerStaticInit33bbd0ec0c437e8727bb0de1fe7cc7a5
         'Symfony\\Polyfill\\Ctype\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
+        'Src\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'PhpOption\\' => 
         array (
@@ -66,6 +75,10 @@ class ComposerStaticInit33bbd0ec0c437e8727bb0de1fe7cc7a5
         'Config\\' => 
         array (
             0 => __DIR__ . '/../..' . '/config',
+        ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app',
         ),
     );
 
